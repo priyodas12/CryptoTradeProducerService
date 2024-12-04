@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: CryptoTradeProducerService
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: ${RABBIT_MQ_USERNAME} #value will fetch from env variable of ide ,this can be later on replaced by helm parameter.
+    password: ${RABBIT_MQ_PASSWORD}
+    template:
+      exchange: "com.routeMobile.cryptoTradeReport.direct"
+      routing-key: "cryptoTradeReport.Created"
+      default-receive-queue: "report.processing.consumer"
+server:
+  port: 12340

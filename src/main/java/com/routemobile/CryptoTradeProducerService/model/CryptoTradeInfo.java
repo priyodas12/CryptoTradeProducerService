@@ -1,43 +1,37 @@
 package com.routemobile.CryptoTradeProducerService.model;
 
 import java.math.BigDecimal;
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * <pre>
- * Sample CryptoTradeInfo
  * {
- * "tradeId": "1e9f3b82-2cbf-4e6b-93a8-5b9d5c21a8f0",
- * "timestamp": "2024-12-03T10:00:00Z",
- * "pair": "BTC/USDT",
- * "tradeType": "buy",
- * "price": 40500.75,
- * "amount": 0.0125,
- * "total": 506.259375
+ * "transactionId": "8b9d27db-2562-47aa-8dfc-f87e0d472fb5",
+ * "conversionPair": "SOL/YEN",
+ * "tradeType": "BUY",
+ * "tradeCountry": "US",
+ * "tradePrice": 435.6243975776997,
+ * "exchangeRate": 147.24248431600714,
+ * "isApproved": true,
+ * "reportCreateDate": "2024-12-05T00:45:37.777112300"
  * }
  * </pre>
  */
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Builder
+@Data
 public class CryptoTradeInfo {
 
-  private UUID tradeId;
-  private Instant timestamp;
+  private UUID transactionId;
   private String conversionPair;
   private String tradeType;
   private String tradeCountry;
   private BigDecimal tradePrice;
   private BigDecimal exchangeRate;
   private boolean isApproved;
-
+  private LocalDateTime reportCreateDate;
 }
 
