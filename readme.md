@@ -8,7 +8,7 @@ is meant for consume by CryptoTradeConsumerService.
 ### Features
 
 - Random Trading data generated for a time interval.
-- Trading Data is being published to rabbitMQ to consume by set of consumer.
+- Trading Data is being published to rabbitMQ subject to be consumed.
 
 ### Technologies Used
 
