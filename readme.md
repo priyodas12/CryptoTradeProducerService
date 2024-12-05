@@ -19,6 +19,8 @@ is meant for consume by CryptoTradeConsumerService.
 - **Maven**
 - **Lombok**
 - **OpenCsv**
+- **jackson**
+- **bruno**
 
 ### Setup and Installation
 
