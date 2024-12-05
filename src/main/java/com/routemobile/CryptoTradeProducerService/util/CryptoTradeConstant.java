@@ -10,6 +10,9 @@ public class CryptoTradeConstant {
   public static final String CRYPTO_TRADE_REPORT_FILE = "Final_Trade_Report_IN.csv";
 
   //scheduler refresh time
-  public static final int DEFAULT_REFRESH_TIME = 5 * 60 * 1000;
+  public static final int DEFAULT_REFRESH_TIME = 60 * 1000;
+
+  //localhost
+  public static final String HOST_NAME = "localhost";
 
 }

@@ -77,7 +77,7 @@ public class CryptoTradeReportGenerator {
   }
 
   private String getConversionPair() {
-    return List.of("ETH/USD", "LTC/EUR", "SOL/YEN", "BTC/INR")
+    return List.of("ETH-USD", "LTC-EUR", "SOL-YEN", "BTC-INR")
         .get(RandomGenerator.getDefault().nextInt(0, 3));
   }
 

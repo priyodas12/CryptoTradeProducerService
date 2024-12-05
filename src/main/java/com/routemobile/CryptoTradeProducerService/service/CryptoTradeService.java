@@ -47,8 +47,7 @@ public class CryptoTradeService {
 
     System.out.println("Latest crypto trade report: " + latestReport);
     latestReport.forEach(
-        cryptoTradeReportRow -> rabbitMqService.publishMessage(
-            String.valueOf(cryptoTradeReportRow)));
+        rabbitMqService::publishMessage);
     return latestReport;
   }
 
@@ -57,8 +56,7 @@ public class CryptoTradeService {
     log.info("Force Publishing latest crypto trade report at: {}", Instant.now());
 
     cryptoTradeInfoList.forEach(
-        cryptoTradeReportRow -> rabbitMqService.publishMessage(
-            String.valueOf(cryptoTradeReportRow)));
+        rabbitMqService::publishMessage);
     return cryptoTradeInfoList;
   }
 

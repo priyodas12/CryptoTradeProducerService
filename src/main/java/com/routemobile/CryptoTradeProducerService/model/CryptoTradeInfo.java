@@ -1,5 +1,7 @@
 package com.routemobile.CryptoTradeProducerService.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -23,15 +25,30 @@ import lombok.Data;
 
 @Builder
 @Data
-public class CryptoTradeInfo {
+public class CryptoTradeInfo implements Serializable {
 
+  @JsonProperty("transactionId")
   private UUID transactionId;
+
+  @JsonProperty("conversionPair")
   private String conversionPair;
+
+  @JsonProperty("tradeType")
   private String tradeType;
+
+  @JsonProperty("tradeCountry")
   private String tradeCountry;
+
+  @JsonProperty("tradePrice")
   private BigDecimal tradePrice;
+
+  @JsonProperty("exchangeRate")
   private BigDecimal exchangeRate;
+
+  @JsonProperty("isApproved")
   private boolean isApproved;
+
+  @JsonProperty("reportCreateDate")
   private LocalDateTime reportCreateDate;
 }
 
